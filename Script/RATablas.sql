@@ -28,8 +28,8 @@ CREATE TABLE RAHormigueroVirtual(
     ,TipoHormiga        VARCHAR(50) NOT NULL
     ,Ubicacion          VARCHAR(50) NOT NULL
     ,Sexo               VARCHAR(50) NOT NULL
-    ,GenoAlimento       VARCHAR(50) NOT NULL
-    ,IngestaNativa      VARCHAR(50) NOT NULL
+    ,GenoAlimento       VARCHAR(50)
+    ,IngestaNativa      VARCHAR(50)
     ,Estado             VARCHAR(10) NOT NULL
     ,FechaCreacion      DATETIME    DEFAULT(datetime('now','localtime'))
     ,FechaModifica      DATETIME            
