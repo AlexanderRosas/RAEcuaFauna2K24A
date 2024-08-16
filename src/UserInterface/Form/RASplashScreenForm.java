@@ -45,7 +45,7 @@ public abstract class RASplashScreenForm {
             new Thread(() -> {
                 for (int i = 0; i <= 100; i++) {
                     try {
-                        Thread.sleep(50); // Espera por 50 milisegundos
+                        Thread.sleep(25); // Espera por 50 milisegundos
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
