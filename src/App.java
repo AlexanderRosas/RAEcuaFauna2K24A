@@ -8,7 +8,7 @@ public class App {
         Thread.sleep(3500);
         new RALoginWindow();
         
-        //EN CASO DE FALLAR EL LOGIN DESCOMENTAR ESTA LINEA
+        //EN CASO DE FALLAR EL LOGIN DESCOMENTAR ESTA LINEA Y COMENTAR LA ANTERIOR
         //new RAHormigueroVirtual();
     }
 }

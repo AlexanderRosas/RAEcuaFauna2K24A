@@ -19,7 +19,7 @@ public class RALoginWindow extends JFrame {
         setTitle("Login");
         setSize(350, 180);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new BorderLayout(10, 10));
+        setLayout(new BorderLayout(3, 3));
         setLocationRelativeTo(null); // Centrar la ventana
 
         // Crear panel con bordes para un mejor diseño
