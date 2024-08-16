@@ -216,7 +216,7 @@ add(panelInferior, BorderLayout.SOUTH);
                 model.setValueAt("Macho", filaSeleccionada, 3);    // Cambiar Sexo a "Macho"
             }
         } else {
-            JOptionPane.showMessageDialog(this, "Por favor, seleccione una fila en la ratabla.", "Advertencia", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Por favor, seleccione una fila en la tabla.", "Advertencia", JOptionPane.WARNING_MESSAGE);
         }
     }
     private void alimentarConIngestaNativa() {
