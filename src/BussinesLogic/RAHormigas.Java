@@ -1,8 +1,8 @@
 package BusinessLogic.Entities;
 
-public abstract class Estudiante {
+public abstract class RAHormigas {
     private String  nombre;
-    public Estudiante(String nombre) {
+    public RAHormigas(String nombre) {
         this.nombre = nombre;
     }
 }

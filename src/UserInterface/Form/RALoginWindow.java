@@ -7,12 +7,12 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class RALoginWindow extends JFrame {
-    private JTextField txtUsuario;
-    private JPasswordField txtClave;
+    private JTextField ratxtUsuario;
+    private JPasswordField ratxtClave;
 
     // Usuario y clave encriptados (ejemplo)
-    private final String usuarioEncriptado = "adadd3022f543efd3ea52413c6bb490f";
-    private final String claveEncriptada = "e10adc3949ba59abbe56e057f20f883e";
+    private final String rausuarioEncriptado = "adadd3022f543efd3ea52413c6bb490f";
+    private final String raclaveEncriptada = "e10adc3949ba59abbe56e057f20f883e";
 
     public RALoginWindow() {
         // Configuración de la ventana
@@ -28,16 +28,16 @@ public class RALoginWindow extends JFrame {
 
         // Crear componentes
         JLabel lblUsuario = new JLabel("Usuario:");
-        txtUsuario = new JTextField();
+        ratxtUsuario = new JTextField();
         JLabel lblClave = new JLabel("Clave:");
-        txtClave = new JPasswordField();
+        ratxtClave = new JPasswordField();
         JButton btnIngresar = new JButton("Ingresar");
 
         // Añadir componentes al panel central
         panelCentral.add(lblUsuario);
-        panelCentral.add(txtUsuario);
+        panelCentral.add(ratxtUsuario);
         panelCentral.add(lblClave);
-        panelCentral.add(txtClave);
+        panelCentral.add(ratxtClave);
         add(panelCentral, BorderLayout.CENTER);
 
         // Crear un panel para centrar el botón
@@ -50,16 +50,16 @@ public class RALoginWindow extends JFrame {
         btnIngresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String usuario = txtUsuario.getText();
-                String clave = new String(txtClave.getPassword());
+                String usuario = ratxtUsuario.getText();
+                String clave = new String(ratxtClave.getPassword());
 
                 // Encriptar los valores ingresados
                 String usuarioEncriptadoIngresado = encriptarMD5(usuario);
                 String claveEncriptadaIngresada = encriptarMD5(clave);
 
                 // Verificar los datos
-                if (usuarioEncriptado.equals(usuarioEncriptadoIngresado) && claveEncriptada.equals(claveEncriptadaIngresada)) {
-                    // Abrir la ventana Hormiguero Virtual
+                if (rausuarioEncriptado.equals(usuarioEncriptadoIngresado) && raclaveEncriptada.equals(claveEncriptadaIngresada)) {
+                   // Abrir la ventana Hormiguero Virtual
                     new RAHormigueroVirtual();
                     dispose(); // Cerrar la ventana de login
                 } else {

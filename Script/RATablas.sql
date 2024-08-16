@@ -1,6 +1,9 @@
 -- database: ../DataBase/RAEcuaFauna.sqlite
 DROP TABLE IF EXISTS RALugar;
 DROP TABLE IF EXISTS RASexo;
+DROP TABLE IF EXISTS RAHormigueroVirtual;
+
+
 
 
 CREATE TABLE RALugar (
@@ -20,10 +23,14 @@ CREATE TABLE RASexo(
     ,FechaModifica      DATETIME            
 );
 
-CREATE TABLE RAHormiga(
-    IdHormiga           integer primary key autoincrement
-    ,TipoHormiga        VARCHAR(10) NOT NULL
-    ,Provincia          VARCHAR(50) NOT NULL
+CREATE TABLE RAHormigueroVirtual(
+    IdHormiga           INTEGER NOT NULL
+    ,TipoHormiga        VARCHAR(50) NOT NULL
+    ,Ubicacion          VARCHAR(50) NOT NULL
+    ,Sexo               VARCHAR(50) NOT NULL
+    ,GenoAlimento       VARCHAR(50) NOT NULL
+    ,IngestaNativa      VARCHAR(50) NOT NULL
+    ,Estado             VARCHAR(10) NOT NULL
     ,FechaCreacion      DATETIME    DEFAULT(datetime('now','localtime'))
     ,FechaModifica      DATETIME            
 );
